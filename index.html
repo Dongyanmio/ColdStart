@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>起始页</title>
+	<!-- Material Design User Interface -->
+	<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+	<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+	<!-- Homemade-->
+	<link rel="stylesheet" href="./index.css" />
+	<script src="./index.js"></script>
+	<!-- FA Icon Library -->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+	<style>
+		html {
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			-ms-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+			filter: grayscale(100%);
+			filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="mdui-toolbar">
+		<span class="mdui-typo-title"></span>
+		<div class="mdui-toolbar-spacer"></div>
+		<a href="./index.html" class="mdui-btn mdui-btn-icon">
+			<i class="mdui-icon material-icons">refresh</i>
+		</a>
+		<a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#copyright'}">
+			<i class="mdui-icon material-icons">copyright</i>
+		</a>
+		<a href="javascript:;" class="mdui-btn mdui-btn-icon">
+			<i class="mdui-icon material-icons">settings</i>
+		</a>
+	</div>
+	<!--
+	<div class="mdui-textfield center glass" style="width:700px;border-radius:20px">
+		<i class="mdui-icon material-icons" onclick="">search</i>
+		<input class="mdui-textfield-input" type="text" placeholder="搜索"/>
+	</div> -->
+	<form class="search-bar center" action="https://cn.bing.com/search" style="margin:auto;max-width:700px">
+		<input type="search" placeholder="搜索..." name="q" class="glass" pattern=".*\S.*" autocomplete="off">
+		<button class="search-btn" type="submit">
+			<span>Search</span>
+		</button>
+	</form>
+	<div class="mdui-dialog" id="copyright">
+		<div class="mdui-dialog-title" style="text-align: center">关于起始页</div>
+		<center><img class="mdui-img-circle" src="./avatar.jpg" style="width:120px" />
+			<div class="mdui-dialog-content">作者:冬烟mio(Dongyan_mio)</div>
+			更新日志
+		</center>
+	</div>
+	<div id="he-plugin-simple"></div>
+	<script>
+		WIDGET = {
+			"CONFIG": {
+				"modules": "01234",
+				"background": "1",
+				"tmpColor": "FFFFFF",
+				"tmpSize": "16",
+				"cityColor": "FFFFFF",
+				"citySize": "16",
+				"aqiColor": "FFFFFF",
+				"aqiSize": "16",
+				"weatherIconSize": "24",
+				"alertIconSize": "18",
+				"padding": "10px 10px 10px 10px",
+				"shadow": "0",
+				"language": "auto",
+				"borderRadius": "10",
+				"fixed": "true",
+				"vertical": "top",
+				"horizontal": "left",
+				"left": "20",
+				"bottom": "20",
+				"key": "33e34fb5cc2b4a4dafb07987885bc467"
+			}
+		}
+	</script>
+	<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+	<script>/*
+		fetch('https://v1.hitokoto.cn')
+			.then(response => response.json())
+			.then(data => {
+				const hitokoto = document.getElementById('hitokoto_text')
+				hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+				hitokoto.innerText = data.hitokoto
+			})
+			.catch(console.error)*/
+	</script>
+	<div id="hitoko-bar" class="hitoko-bar hidden glass">
+		<p id="hitokoto"><a href="#" id="hitokoto_text" style="color: white;text-decoration: none;">江泽民同志永垂不朽。</a>
+		</p>
+	</div>
+</body>
+
+</html>
