@@ -14,6 +14,7 @@
 	<!-- FA Icon Library -->
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 	<style>
+		/*
 		html {
 			-webkit-filter: grayscale(100%);
 			-moz-filter: grayscale(100%);
@@ -21,7 +22,7 @@
 			-o-filter: grayscale(100%);
 			filter: grayscale(100%);
 			filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-		}
+		}*/
 	</style>
 </head>
 
@@ -54,7 +55,7 @@
 		<div class="mdui-dialog-title" style="text-align: center">关于起始页</div>
 		<center><img class="mdui-img-circle" src="./avatar.jpg" style="width:120px" />
 			<div class="mdui-dialog-content">作者:冬烟mio(Dongyan_mio)</div>
-			更新日志
+			<div class="mdui-dialog-content">更新日志</div>
 		</center>
 	</div>
 	<div id="he-plugin-simple"></div>
@@ -85,7 +86,7 @@
 		}
 	</script>
 	<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
-	<script>/*
+	<script>
 		fetch('https://v1.hitokoto.cn')
 			.then(response => response.json())
 			.then(data => {
@@ -93,11 +94,52 @@
 				hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
 				hitokoto.innerText = data.hitokoto
 			})
-			.catch(console.error)*/
+			.catch(console.error)
 	</script>
-	<div id="hitoko-bar" class="hitoko-bar hidden glass">
-		<p id="hitokoto"><a href="#" id="hitokoto_text" style="color: white;text-decoration: none;">江泽民同志永垂不朽。</a>
+	<div id="hitoko-bar" class="hitoko-bar hidden">
+		<p id="hitokoto"><a href="#" id="hitokoto_text" style="color: white;text-decoration: none;">你和我之间最大的距离莫过于断网。</a>
 		</p>
+	</div>
+	<div class="bottom-bar">
+		<a>ColdStart</a>
+		in 2022 by
+		<a href="https://github.com/Dongyanmio">冬烟mio</a>
+		|
+		<a id="model-btn" mdui-dialog="{target: '#update'}">v1.1</a>
+		|
+		<a href="https://www.netlify.com/">Netlify</a>
+	</div>
+
+	<div class="mdui-dialog" id="update">
+		<div class="mdui-dialog-title" style="text-align: center">更新日志</div>
+		<div class="mdui-table-fluid">
+			<table class="mdui-table mdui-table-hoverable">
+				<thead>
+					<tr>
+						<th>版本号</th>
+						<th>更新内容</th>
+						<th>更新负责人</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>v1.0</td>
+						<td>基础框架</td>
+						<td><a href="https://github.com/Dongyanmio" style="color: black;"><button class="mdui-btn mdui-ripple mdui-color-indigo">冬烟mio</button></a></td>
+					</tr>
+					<tr>
+						<td>v1.1</td>
+						<td>更新一言、天气、底部栏</td>
+						<td><a href="https://github.com/Dongyanmio" style="color: black;"><button class="mdui-btn mdui-ripple mdui-color-indigo">冬烟mio</button></a></td>
+					</tr>
+					<tr>
+						<td>v1.2</td>
+						<td>正在开发...</td>
+						<td><a href="https://github.com/Dongyanmio" style="color: black;"><button class="mdui-btn mdui-ripple mdui-color-indigo">冬烟mio</button></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </body>
 

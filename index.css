@@ -7,7 +7,7 @@ body {
 }
 
 .glass {
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(30px)
 }
 
 .center {
@@ -208,7 +208,7 @@ body,
 .hitoko-bar{
 	color: rgba(255,255,255,0.6);
 	position: fixed;
-	bottom: 15%;
+	bottom: 25%;
 	left: 50%;
 	transform: translateX(-50%);
 	transition: 0.2s;
@@ -227,4 +227,33 @@ body,
 }
 #hitoko-author{
 	float: right;
+}
+
+.bottom-bar {
+    border: 0;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 10px;
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	color:rgba(255,255,255,0.5);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	padding: 2px 10px;
+	overflow: scroll;
+}
+
+.bottom-bar::-webkit-scrollbar {
+	display: none;
+}
+
+.bottom-bar a{
+	text-decoration: none;
+	color:rgba(255,255,255,0.7);
+}
+.bottom-bar a:hover{
+	color:rgba(255,255,255,0.9);
 }
